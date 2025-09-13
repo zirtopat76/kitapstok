@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Kitap PWA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#61c0bf">
+</head>
+<body>
+    <h1>Kitaplarım 📚</h1>
+
+    <div class="home-icon-container">
+        <img id="baykus" class="home-icon" src="icons/baykus.png" alt="Baykuş">
+    </div>
+
+    <div class="input-group">
+        <input type="text" id="title" placeholder="Kitap Başlığı">
+        <input type="text" id="author" placeholder="Yazar">
+        <input type="number" id="quantity" placeholder="Adet">
+        <button id="addBtn">Kitap Ekle</button>
+    </div>
+
+    <div class="search-group">
+        <input type="text" id="searchInput" placeholder="Ara...">
+        <button id="sortTitleBtn">Ada Göre Sırala</button>
+        <button id="sortQuantityBtn">Stok Göre Sırala</button>
+        <button id="homeBtn">Anasayfa</button>
+    </div>
+
+    <div id="bookList"></div>
+
+    <audio id="owlSound" src="sesler/owl.mp3" preload="auto"></audio>
+    <audio id="jungleSound" src="sesler/jungle.mp3" preload="auto" loop></audio>
+
+    <script src="app.js"></script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+      .then(() => console.log('Service Worker kayıtlı!'))
+      .catch(err => console.log('Service Worker kaydı başarısız:', err));
+    }
+    </script>
+</body>
+</html>

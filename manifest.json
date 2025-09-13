@@ -1,0 +1,13 @@
+{
+  "name": "Kitaplarım",
+  "short_name": "KitapApp",
+  "description": "Kendi kitaplarınızı ekleyip yönetebileceğiniz PWA uygulaması",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#a0e7e5",
+  "theme_color": "#61c0bf",
+  "icons": [
+    {"src":"icons/baykus.png","sizes":"192x192","type":"image/png"},
+    {"src":"icons/baykus.png","sizes":"512x512","type":"image/png"}
+  ]
+}
